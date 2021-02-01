@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Play'EM
+A small VOD app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Inspiration
+I created a VOD app to further develop my skills with ReactJs.
 
-## Available Scripts
+The app architecture/structure is mostly based on the following criterias:
++ Menu in the header on each page.
++ Each cover leads to AssetDetails page.
++ The project has the following page components:
+    + __Home__
+        - Route: '/' or ''
+        - Content: carousel/slider from the popular assets.
+    + __Categories__
+        - Route: '/categories'
+        - Content: a grid of categories, use Get categories API call. Clicking on any category element should take you to "MoviesByCategory" page
+    + __MoviesByCategory__
+        - Route: '/movies/:category_id'
+        - Content: a grid of movies using Get assets by category API call. The API returns 20 elements by a call so I implemented lazy loading when the bottom of the page has been reached.
+    + __AssetDetails__
+        - Route: '/asset/:id'
+        - Content:
+            - basic information about the asset, images etc
+            - "Watch Trailers" button which will show the youtube player inside a modal.
+    + __Popular__
+        - Route: '/popular'
+        - Content: grid of popular assets
+    + __Not found (404)__
+        - Route: '*'
+        - Content: a not found message + the last 3 elements from the popular movie list
 
-In the project directory, you can run:
+# Development stack
++ [React.js](https://reactjs.org/)
++ [React Context](https://reactjs.org/docs/context.html)
++ I used React Functional Components to style the project.
++ The API uses [TheMovieDB](https://www.themoviedb.org/).
 
-### `yarn start`
+# APIs
++ TheMovieDB (https://www.themoviedb.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# External packages
++ [styled-components]
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Current progress
+- [x] App design
+- [ ] Basic UI prototype
+- [ ] Create main page
+- [ ] Create components from main page
+- [ ] Implement React Context
+- [ ] Bring data from external source
+- [ ] Remove extra code and fix typos or bugs
+- [ ] Add support for mobile devices
 
-### `yarn test`
+# Running
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Clone & install
 
-### `yarn build`
++ Clone this repo `git@github.com:dieterhalosta/play-em.git`
++ `cd play-em`
++ run `npm install`
++ run `yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Released under the [MIT License](http://opensource.org/licenses/MIT).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Feedback
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feedback is always welcome. Feel free to contact me, I would love to know if you notice something that can be done better.
