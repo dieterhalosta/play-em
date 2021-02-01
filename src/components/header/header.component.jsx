@@ -1,6 +1,6 @@
 import React from 'react';
 import {ReactComponent as Logo} from '../../logo.svg';
-import {HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink} from './header.style';
+import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.style';
 
 
 const Header = () => (

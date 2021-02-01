@@ -10,12 +10,9 @@ function App() {
   return (
     <div className="App">
     <Header />
-    <div className='carousel'>Carousel</div>
-    <div className='categories'>Categories</div>
-    <div className='footer'>Footer</div>  
     <Switch>
       <Route exact path='/' component={HomePage}/>
-      <Route path='/categories' component={CategoriesPage}/>
+      <Route exact path='/categories' component={CategoriesPage}/>
       <Route exact path='/popular' component={PopularPage}/>
     </Switch>
     </div>
