@@ -4,12 +4,12 @@ const buttonStyles = css`
     background-color: transparent;
     color: #989F7D;
     border: none;
+    outline: none;
 
     &:hover {
-        background-color: #989F7D;
         color: #668158;
-        border: none;
-}
+        border-bottom: 3px solid #668158;
+    }
 `;
 
 export const CustomButtonContainer = styled.button`

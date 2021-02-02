@@ -1,7 +1,7 @@
 import React from 'react';
-import {ReactComponent as Logo} from '../../assets/logo.svg';
+import {ReactComponent as Logo} from '../../assets/logo3.svg';
 import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.style';
-
+import CustomButton from '../custom-button/custom-button.component';
 
 const Header = () => (
     <HeaderContainer>
@@ -10,10 +10,14 @@ const Header = () => (
         </LogoContainer>
         <OptionsContainer>
             <OptionLink to='/categories'>
-                CATEGORIES
+                <CustomButton>
+                    CATEGORIES
+                </CustomButton>
             </OptionLink>
             <OptionLink to='/popular'>
-                POPULAR
+                <CustomButton>
+                    POPULAR
+                </CustomButton>
             </OptionLink>
         </OptionsContainer>
     </HeaderContainer>
