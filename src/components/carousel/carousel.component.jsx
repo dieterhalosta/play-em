@@ -1,15 +1,10 @@
 import React from 'react';
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+import {CarouselData} from './carouselData'
+import ImageSlider from './imageSlider/imageSlider.component';
+import './carousel.style';
 
-
-const Carousel = ({content}) => (
-    <Slider>
-        {content.map((article, index) => <div key={index}>
-        <h2>{article.title}</h2>
-        <div>{article.description}</div>
-        </div>)}
-    </Slider>
+const Carousel = () => (
+    <ImageSlider slides={CarouselData}/>
 )
 
 export default Carousel;

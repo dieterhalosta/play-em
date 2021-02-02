@@ -1,10 +1,12 @@
 body{
   font-family: 'Montserrat';
+  align-items: center;
   padding: 20px 60px;
   background-image: linear-gradient(to bottom right, #6A7148, #2A3B1B);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  color: #989F7D
 }
 
 a{

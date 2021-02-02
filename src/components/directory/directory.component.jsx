@@ -1,13 +1,17 @@
 import React from 'react';
-import {DirectoryMenu} from './directory.style';
+import {DirectoryContainer, CarouselContainer, CategoryContainer} from './directory.style';
 import CategoryList from '../category-list/category-list.component';
 import Carousel from '../carousel/carousel.component';
 
 const Directory = () => (
-  <DirectoryMenu>
+  <DirectoryContainer>
+    <CarouselContainer>
       <Carousel/>
+    </CarouselContainer>
+    <CategoryContainer>
       <CategoryList/>
-      </DirectoryMenu>      
+    </CategoryContainer>   
+  </DirectoryContainer>      
 );      
 
 export default Directory;
