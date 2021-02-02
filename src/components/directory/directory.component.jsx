@@ -1,10 +1,12 @@
 import React from 'react';
 import {DirectoryMenu} from './directory.style';
+import CategoryList from '../category-list/category-list.component';
+import Carousel from '../carousel/carousel.component';
 
 const Directory = () => (
   <DirectoryMenu>
-      <div className='carousel'> This is where the coursel will be implemented</div>
-      <div className='categories'>This is where we will add a category list</div>
+      <Carousel/>
+      <CategoryList/>
       </DirectoryMenu>      
 );      
 

@@ -6,7 +6,7 @@ import HomePage from './pages/homepage/homepage.component';
 import CategoriesPage from './pages/categories/categories.component';
 import PopularPage from './pages/popular/popular.component';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
     <Header />

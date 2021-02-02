@@ -1,7 +1,10 @@
 body{
   font-family: 'Montserrat';
   padding: 20px 60px;
-  background-color:#2A3B1B;
+  background-image: linear-gradient(to bottom right, #6A7148, #2A3B1B);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 a{
