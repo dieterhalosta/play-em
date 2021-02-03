@@ -5,7 +5,7 @@ import {FooterContainer, TextContainer} from './footer.style';
 function Footer() {
     return (
         <FooterContainer>
-            <TextContainer>Trade Mark from Dieter Halosta</TextContainer>
+            <TextContainer>Small VOD app to test React knowledge for 3SS</TextContainer>
         </FooterContainer>
     )
 }

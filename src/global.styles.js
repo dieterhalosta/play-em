@@ -2,12 +2,16 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 	body {
+		width: 100vw;
+		height: 100vh;
 		font-family: 'Open Sans Condensed';
+		margin: 0;
 		padding: 20px 40px;
-        background-image: linear-gradient(to bottom right, #6A7148, #2A3B1B);
+        background-image: linear-gradient(to bottom right, #434046, #181819);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+		background-size: cover;
+		overflow: none;
 		@media screen and (max-width: 800px) {
 			padding: 10px;
 		}
@@ -19,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	* {
+
         box-sizing: border-box;
-        color: #989F7D
+        color: #E0610E
 	}
 `;

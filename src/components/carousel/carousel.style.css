@@ -1,12 +1,13 @@
 .slider {
     position: relative;
-    height: 100vh;
+    height: 400px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden
 }
 
 .image{

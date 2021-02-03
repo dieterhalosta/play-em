@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import {CarouselData} from '../../Silder/SliderDataTest'
-import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa'
+import {CarouselData} from '../../Silder/SliderData'
+import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
 
 
 const ImageSlider = ({slides}) => {
@@ -21,12 +21,12 @@ const ImageSlider = ({slides}) => {
 
     return (
         <section className='slider'>
-            <FaArrowCircleLeft className='left-arrow' onClick={prevSlide}/>
-            <FaArrowCircleRight className='right-arrow' onClick={nextSlide}/>
+            <FaArrowLeft className='left-arrow' onClick={prevSlide}/>
+            <FaArrowRight className='right-arrow' onClick={nextSlide}/>
             {CarouselData.map((slide, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} keys ={index}>
-                        {index === current && (<img src={slide.image} alt="test image" className='image'/>)}
+                        {index === current && (<img src={slide.image} alt="" className='image'/>)}
                     </div>
                     )
             })}

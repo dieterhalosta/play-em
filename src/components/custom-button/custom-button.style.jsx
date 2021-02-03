@@ -2,13 +2,13 @@ import styled, {css} from 'styled-components';
 
 const buttonStyles = css`
     background-color: transparent;
-    color: #989F7D;
+    color: #E0610E;
     border: none;
     outline: none;
 
     &:hover {
-        color: #668158;
-        border-bottom: 3px solid #668158;
+        color: #0EDCE8;
+        border-bottom: 3px solid #0EDCE8;
     }
 `;
 

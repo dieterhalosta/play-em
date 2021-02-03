@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 export const DirectoryContainer = styled.div`
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
 `;
 
 export const CarouselContainer = styled.div`
-    height: 60%;
-`;
-
-export const CategoryContainer = styled.div`
-    height: 40%;
+    height: 100%;
 `;
