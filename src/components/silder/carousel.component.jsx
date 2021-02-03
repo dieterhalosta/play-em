@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import {CarouselData} from './SliderData'
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
-import {CarouselContainer, CarouselInner, Arrows, CenterContent, TitleBox, LeftArrow} from './carousel.style'
+import {CarouselContainer, CarouselInner, Arrows, CenterContent, TitleBox} from './carousel.style'
 import CustomButton from '../custom-button/custom-button.component'
 
 const Carousel = () => {

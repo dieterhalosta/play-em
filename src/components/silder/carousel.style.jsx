@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
-
 
 export const CarouselContainer = styled.div`
     width:100%;
@@ -38,11 +36,4 @@ export const CenterContent = styled.div`
 
 export const TitleBox = styled.h1`
     font-size: 5rem;
-`;
-
-export const LeftArrow = styled(FaArrowLeft)`
-    fontSize: 80px;
-    &:hover {
-        color: #0EDCE8;
-    }
 `;
