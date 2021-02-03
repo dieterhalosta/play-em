@@ -7,7 +7,10 @@ export const FooterContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 25px;
+    down:0;
+    position: bottom;
 `;
 
 export const TextContainer = styled.div`

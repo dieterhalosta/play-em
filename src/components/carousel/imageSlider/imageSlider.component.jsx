@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {CarouselData} from '../carouselData'
+import {CarouselData} from '../../Silder/SliderDataTest'
 import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa'
 
 

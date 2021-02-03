@@ -3,11 +3,14 @@ import {Link} from 'react-router-dom';
 
 
 export const HeaderContainer = styled.div`
+    top:0;
     height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    align-items: center;
+    z-index: 10;
    
     @media screen and (max-width: 800px) {
         height: 60px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {CarouselData} from './carouselData'
+import {CarouselData} from '../Silder/SliderDataTest'
 import ImageSlider from './imageSlider/imageSlider.component';
 import './carousel.style';
 
