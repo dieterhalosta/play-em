@@ -1,19 +1,23 @@
-.carousel{
+import styled from 'styled-components';
+import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
+
+
+export const CarouselContainer = styled.div`
     width:100%;
     height:70vh;
     background-color: black;
-}
+`;
 
-.carouselInner {
+export const CarouselInner = styled.div`
     height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-}
+`;
 
-.carouselInner .left {
+export const Arrows = styled.div`
     flex: 2%;
     height: 100%;
     background-color: transparent;
@@ -21,37 +25,24 @@
     place-items: center;
     color: white;
     cursor: pointer;
-}
+`;
 
-.carouselInner .right {
-    flex: 2%;
-    height: 100%;
-    background-color: transparent;
-    display: grid;
-    place-items: center;
-    color:white;
-    cursor: pointer;
-}
-
-.carouselInner .center {
+export const CenterContent = styled.div`
     flex: 90%;
     height: 100%;
     display: grid;
     place-items: center;
     text-align: justify;
     text-align-last: center;
-}
+`;
 
-h1 {
+export const TitleBox = styled.h1`
     font-size: 5rem;
-}
+`;
 
-p {
-    font-size: 2rem;
-}
-
-h1, p {
-    
-    padding: 20;
-    border-radius: 9px;
-}
+export const LeftArrow = styled(FaArrowLeft)`
+    fontSize: 80px;
+    &:hover {
+        color: #0EDCE8;
+    }
+`;

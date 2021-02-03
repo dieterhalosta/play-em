@@ -1,8 +1,8 @@
 import React, { useState} from 'react'
-import './carousel.style.css'
 import {CarouselData} from './SliderData'
 import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
-
+import {CarouselContainer, CarouselInner, Arrows, CenterContent, TitleBox, LeftArrow} from './carousel.style'
+import CustomButton from '../custom-button/custom-button.component'
 
 const Carousel = () => {
 
@@ -19,20 +19,22 @@ const Carousel = () => {
     }
 
     return(
-        <div className='carousel'>
-            <div className='carouselInner' style={{ backgroundImage: `url(${CarouselData[current].image})`}} >
-                <div className='left' onClick={moveLeft}>
-                   <FaArrowLeft style={{ fontSize: 30 }}/> 
-                </div>
-                <div className='center'>
-                    <h1>{CarouselData[current].title}</h1>
-                    <p>{CarouselData[current].subtitle}</p>
-                </div>
-                <div className='right' onClick={moveRight}>
+        <CarouselContainer>
+        
+            <CarouselInner style={{ backgroundImage: `url(${CarouselData[current].image})`}} >
+                <Arrows onClick={moveLeft}>
+                    <FaArrowLeft style={{ fontSize: 30 }}/> 
+                </Arrows>
+                <CenterContent>
+                    <TitleBox>{CarouselData[current].title}</TitleBox>
+                    <CustomButton>Click here for more details</CustomButton>
+                </CenterContent>
+                <Arrows onClick={moveRight}>
                     <FaArrowRight style={{ fontSize: 30 }}/>
-                </div>
-            </div>
-        </div>
+                </Arrows>
+            </CarouselInner>
+     
+        </CarouselContainer>
     )
 }
 
