@@ -1,12 +1,12 @@
 import React from 'react';
-import {ReactComponent as Logo} from '../../assets/logo3.svg';
 import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.style';
 import CustomButton from '../custom-button/custom-button.component';
+import {FaYoutube} from 'react-icons/fa'
 
 const Header = () => (
     <HeaderContainer>
         <LogoContainer to="/">
-            <Logo className='logo'/>
+            <FaYoutube size='50px' />
         </LogoContainer>
         <OptionsContainer>
             <OptionLink to='/categories'>

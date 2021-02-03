@@ -21,6 +21,8 @@ export const LogoContainer = styled(Link)`
     width: 70px;
     padding: 11px;
     align-items: center;
+    color: #989F7D;
+    background-color: transparent;
 
     @media screen and (max-width: 800px) {
         width: 50px;
