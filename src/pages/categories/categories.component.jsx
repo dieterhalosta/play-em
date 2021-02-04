@@ -1,10 +1,14 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import CategoryOverview from '../../components/category-overview/category-overview.component'
+import CategoryPage from '../category/category.component'
 
-const Categories = () => {
-    return (
+const Categories = ({match}) => (
+    <div className='shop-page'>
+        <Route exact path={`${match.path}`} component={CategoryOverview}/>
+        <Route path={`${match.path}/:category_id`} component={CategoryPage} />
+    </div>
 
-        <div> This is the categories page</div>
-    )
-}
+)
 
 export default Categories
