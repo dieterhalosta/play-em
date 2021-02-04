@@ -1,17 +1,20 @@
 import React from 'react'
-
-const CategoryPreview = ({title, items}) => {
-    return (
-        <div className='category-preview'>
-            <h1 classname ='title'>{title.toUpperCase()}</h1>
-            <div className='preview'>
-                {
-                    items.filter((item, idx) => idx <4).map(item => (
-                        <div key={item.id}>{item.name}</div>
+import CategoryItem from '../category-item/category-item.component'
+import {CategoryPreviewContainer, TitleContainer, PreviewContainer} from './preview-category.style'
+const CategoryPreview = ({title, items, history, match, routeName}) => (
+       
+       <CategoryPreviewContainer>
+           <TitleContainer onClick={() => history.push(`${match.path}`)}>
+               {title.toUpperCase()}
+           </TitleContainer>
+            <PreviewContainer>
+                {items.filter((item, idx) => idx < 4).map(item => (
+                    <CategoryItem key={item.id} item={item}/>
                 ))}
-            </div>
-        </div>
-    )
-}
+            </PreviewContainer>
+
+
+       </CategoryPreviewContainer>
+)
 
 export default CategoryPreview
