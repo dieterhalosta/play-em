@@ -14,6 +14,11 @@ export const CategoryItemContainer = styled.div`
         .image{
             opacity: 0.8;
         }
+
+        .details{
+          opacity: 0.85;
+          display: flex;
+        }
     }
 
     @media screen and (max-width: 800px){
@@ -23,33 +28,49 @@ export const CategoryItemContainer = styled.div`
             .image{
                 opacity: unset;
             }
+            button {
+              opacity: unset;
+            }
         }
     }
  `;
  
  export const BackgroundImage = styled.div`
   width: 100%;
-  height: 95%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
-export const CategoryFooterContainer = styled.div`
+export const HiddenContainer = styled.div`
+    display:none;
+`;
+
+
+export const DetailsContainer = styled.div`
   width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  place-items: center;
+  text-align: justify;
+  text-align-last: center;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+  }
 `;
 
 export const NameContainer = styled.span`
-  width: 90%;
-  margin-bottom: 15px;
-`;
-
-export const PriceContainer = styled.span`
-  width: 10%;
-  text-align: right;
+  font-size: 3rem;
+  width: 100%;
 `;

@@ -1,12 +1,12 @@
 import React from 'react'
 import CategoryItem from '../category-item/category-item.component'
-import {CategoryPreviewContainer, TitleContainer, PreviewContainer} from './preview-category.style'
+import {CategoryPreviewContainer, TitleContainer, PreviewContainer} from './category-preview.style'
 
 const CategoryPreview = ({title, items, history, match, routeName}) =>{ 
     
     const goToCaterogy = () => {
         //history.push(`${match.path}/${routeName}`)
-        console.log(match.path)
+        console.log(items)
     }
 
     return(
