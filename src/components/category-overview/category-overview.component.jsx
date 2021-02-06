@@ -1,21 +1,19 @@
-import React, {useContext} from 'react'
-import CategoryPreview from '../category-preview/category-preview.component'
-import CategoryContext from '../../contexts/categories/category.context'
-import {CategoryOverviewContainer} from './category-overview.style'
+import React, { useContext } from "react";
+import CategoryPreview from "../category-preview/category-preview.component";
+import CategoryContext from "../../contexts/categories/category.context";
+import { CategoryOverviewContainer } from "./category-overview.style";
 
-const CategoryOverview = () => {
-    const categoryMap = useContext(CategoryContext);
-    const categories = Object.keys(categoryMap).map(key => categoryMap[key])
+const CategoryOverview = (props) => {
+  const categoryMap = useContext(CategoryContext);
+  const categories = Object.keys(categoryMap).map((key) => categoryMap[key]);
 
-    return (
-        <CategoryOverviewContainer>
-            {categories.map(({id, ...otherCategoryProps}) => (
-                
-                <CategoryPreview key={id} {...otherCategoryProps}/>
-        
-            ))}
-        </CategoryOverviewContainer>
-        )
-}
+  return (
+    <CategoryOverviewContainer>
+      {categories.map(({ id, ...otherCategoryProps }) => (
+        <CategoryPreview key={id} {...otherCategoryProps} {...props} />
+      ))}
+    </CategoryOverviewContainer>
+  );
+};
 
-export default CategoryOverview
+export default CategoryOverview;
