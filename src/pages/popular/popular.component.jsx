@@ -1,26 +1,45 @@
-import React, { useContext } from "react";
-import CategoryItem from "../../components/category-item/category-item.component.jsx";
+import React from "react";
 import {
-  PopularContainer,
+  PageContainer,
   TitleContainer,
-  ItemsContainer,
+  Title,
+  PopularContainer,
+  Items,
 } from "./popular.style";
-import PopularContext from "../../contexts/categories/category.context";
 
-const Popular = ({ match }) => {
-  const populars = useContext(PopularContext);
-  console.log(populars.map)
-  const popular = populars[match.params];
-  const { title, items } = popular;
+const Popular = () => {
   return (
-    <PopularContainer>
-      <TitleContainer>{title}</TitleContainer>
-      <ItemsContainer>
-        {items.map((item) => (
-          <CategoryItem key={item.id} item={item} />
-        ))}
-      </ItemsContainer>
-    </PopularContainer>
+    <PageContainer>
+      <TitleContainer>
+        <Title>Popular</Title>
+      </TitleContainer>
+      <PopularContainer>
+        <Items>
+          <div className='box'>
+            <h2>Dell</h2>
+            <button>Click here</button>
+          </div>
+        </Items>
+        <Items>
+          <div className='box'>
+            <h2>Dell</h2>
+            <button>Click here</button>
+          </div>
+        </Items>
+        <Items>
+          <div className='box'>
+            <h2>Dell</h2>
+            <button>Click here</button>
+          </div>
+        </Items>
+        <Items>
+          <div className='box'>
+            <h2>Dell</h2>
+            <button>Click here</button>
+          </div>
+        </Items>
+      </PopularContainer>
+    </PageContainer>
   );
 };
 
