@@ -14,7 +14,7 @@ export const CategoryItemContainer = styled.div`
     }
 
     .details {
-      opacity: 0.85;
+      opacity: 1;
       display: flex;
     }
   }
@@ -49,7 +49,7 @@ export const HiddenContainer = styled.div`
 export const DetailsContainer = styled.div`
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 1;
   position: absolute;
   display: grid;
   flex-direction: column;

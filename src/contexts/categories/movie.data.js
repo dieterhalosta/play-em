@@ -1,7 +1,7 @@
 const MovieData = [
   {
     id: 1,
-    title: "Comedy",
+    title: "comedy",
     routeName: "comedy",
     items: [
       {
