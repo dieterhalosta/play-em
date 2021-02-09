@@ -34,8 +34,8 @@ export const Image = styled.div`
   background-size: cover;
   background-position: center;
   opacity: 0.5;
-  border-radius:10px;
-    box-shadow: 1px 8px #434046;
+  border-radius: 10px;
+  box-shadow: 1px 8px #434046;
 `;
 
 export const DetailContainer = styled.div`
@@ -88,4 +88,14 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const ModalContainer = styled.div`
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  marginright: -50%;
+  transform: translate(-50%, -50%);
+
 `;
