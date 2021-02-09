@@ -7,6 +7,7 @@ import CategoriesPage from "./pages/categories/categories.component";
 import PopularPage from "./pages/popular/popular.component";
 import NotFound from "./pages/not-found/not-found.component";
 import AssetDetails from './pages/asset-details/asset-details.component'
+import MovieByCategory from './pages/movie-by-category/movie-by-category.component'
 import Footer from "./components/footer/footer.component";
 
 const App = () => {
@@ -19,7 +20,9 @@ const App = () => {
         <Route exact path='/categories' component={CategoriesPage} />
         <Route exact path='/popular' component={PopularPage} />
         <Route exact path='/assets' component={AssetDetails} />
+        <Route exact path='/movieByCategory' component={MovieByCategory} />
         <Route exact path='*' component={NotFound} />
+        
       </Switch>
       <Footer />
     </div>

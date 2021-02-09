@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
-import MovieData from "./movie.data";
+import CategoriesData from "./categories.data";
 
-const CategoryContext = createContext(MovieData);
+const CategoryContext = createContext(CategoriesData);
 
 export default CategoryContext;
