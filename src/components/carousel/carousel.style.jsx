@@ -15,6 +15,12 @@ export const CarouselInner = styled.div`
   display: flex;
 `;
 
+export const CarouselItem = styled.div`
+  min-width:100%
+  transition: 0.5s;
+  transform: ${(props) => `translateX(${props.x}%)`}
+`;
+
 export const Arrows = styled.div`
   flex: 2%;
   height: 100%;
@@ -34,6 +40,7 @@ export const CenterContent = styled.div`
   text-align-last: center;
 `;
 
-export const TitleBox = styled.h1`
-  font-size: 5rem;
+export const CarouselImage = styled.img`
+  width: 100%;
+  height: auto;
 `;
