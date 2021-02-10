@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const PageContainer = styled.div`
   height: 100%;
@@ -21,3 +22,8 @@ export const Items = styled.div`
   grid-template-columns: auto auto auto;
   align-items: center;
 `;
+export const MovieCard = styled(Link)`
+  cursor: pointer;
+`;
+export const MovieCardTitleContainer = styled.div``;
+export const MovieCardTitle = styled.h6``;
