@@ -50,7 +50,7 @@ const App = () => {
         <Route exact path='/popular' component={PopularPage} /> */}
         <Route exact path='/asset/:id' component={AssetDetails} />
         <Route exact path='/movies/:categoryId' component={MovieByCategory} />
-        <Route exact path='*' component={NotFound} />
+        <Route component={NotFound} />
       </Switch>
       </PopularItemsStore>
       <Footer />

@@ -7,21 +7,26 @@ import {
 } from "./header.style";
 import CustomButton from "../custom-button/custom-button.component";
 import { FaYoutube } from "react-icons/fa";
+import MenuContext from '../../contexts/menu/menu.context';
 
-const Header = () => (
+const renderHeader = (menuItems) => {
+  return menuItems.map(item => {
+    return <OptionLink key={item.id} to={item.route}><CustomButton>{item.lable}</CustomButton></OptionLink>
+  })
+}
+
+const Header = () => {
+  return(
   <HeaderContainer>
     <LogoContainer to='/'>
       <FaYoutube size='50px' />
     </LogoContainer>
     <OptionsContainer>
-      <OptionLink to='/categories'>
-        <CustomButton>CATEGORIES</CustomButton>
-      </OptionLink>
-      <OptionLink to='/popular'>
-        <CustomButton>POPULAR</CustomButton>
-      </OptionLink>
+      <MenuContext.Consumer>
+        {menuItems => renderHeader(menuItems)}
+      </MenuContext.Consumer>
     </OptionsContainer>
   </HeaderContainer>
-);
+)};
 
 export default Header;
