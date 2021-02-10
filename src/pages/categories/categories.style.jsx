@@ -16,6 +16,9 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
   font-size: 3rem;
 `;
+
+export const CategoriesBox = styled.div``;
+
 export const CategoriesContainer = styled.div`
   display: inline-grid;
   height: 70%;
