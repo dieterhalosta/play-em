@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { getMenu } from "../../movieApi/movieApi.utils";
+import { getMenuItems } from "../../movieApi/movieApi.utils";
 import Spinner from "../../components/spinner/spinner.component";
 
 const MenuContext = React.createContext();
@@ -10,12 +10,12 @@ export const MenuStore = (props) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    getMenu()
+    getMenuItems()
       .then((data) => {
         console.log(data);
         setMenuItems(data);
       })
-      .catch((error) => setErrorMessage(error));
+      .catch((error) => setErrorMessage(error.message));
   }, []);
 
   if (errorMessage) return <div>{errorMessage}</div>;

@@ -1,7 +1,7 @@
 const api_url = "https://video-proxy.3rdy.tv/api/vod";
-const menu_url = "https://video-proxy.3rdy.tv/api/static/menu";
+const menu_url = "https://video-proxy.3rdy.tv/api/static/menu?=";
 
-export async function getMenu() {
+export async function getMenuItems() {
   try {
     const response = await fetch(menu_url);
     const result = await response.json();

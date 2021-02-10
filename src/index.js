@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import {MenuStore} from './contexts/menu/menu.context'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <MenuStore>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  </MenuStore>,
   document.getElementById("root")
 );
