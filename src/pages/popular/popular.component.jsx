@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
   PageContainer,
   TitleContainer,
@@ -6,8 +6,13 @@ import {
   PopularContainer,
   Items,
 } from "./popular.style";
+import PopularContext from '../../contexts/popular/popular.context'
+import {renderMovies} from '../MoviesByCategory/movies-by-category.component'
 
 const Popular = () => {
+
+  const popularMovies = useContext(PopularContext)
+
   return (
     <PageContainer>
       <TitleContainer>
@@ -15,28 +20,7 @@ const Popular = () => {
       </TitleContainer>
       <PopularContainer>
         <Items>
-          <div className='box'>
-            <h2>Dell</h2>
-            <button>Click here</button>
-          </div>
-        </Items>
-        <Items>
-          <div className='box'>
-            <h2>Dell</h2>
-            <button>Click here</button>
-          </div>
-        </Items>
-        <Items>
-          <div className='box'>
-            <h2>Dell</h2>
-            <button>Click here</button>
-          </div>
-        </Items>
-        <Items>
-          <div className='box'>
-            <h2>Dell</h2>
-            <button>Click here</button>
-          </div>
+        {renderMovies(popularMovies)}
         </Items>
       </PopularContainer>
     </PageContainer>
