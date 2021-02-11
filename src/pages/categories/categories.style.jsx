@@ -7,6 +7,7 @@ export const CategoryPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin-bottom: 30px;
 `;
 export const TitleContainer = styled.div`
   height: 30%;
@@ -14,18 +15,18 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
 `;
 
-export const CategoriesBox = styled.div``;
+export const CategoriesBox = styled.div`
+display: inline-grid;
+grid-gap: 50px;
+grid-template-columns: auto auto auto;
+justify-content: space-evenly;
+height: 70%;
+width: 100%;`;
 
 export const CategoriesContainer = styled.div`
-  display: inline-grid;
-  height: 70%;
-  width: 100%;
-  justify-content: space-evenly;
-  grid-gap: 50px;
-  grid-template-columns: auto auto auto;
 `;
 export const CategoryLink = styled(Link)`
   cursor: pointer;
