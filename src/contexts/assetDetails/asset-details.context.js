@@ -1,14 +1,13 @@
 import React, { useEffect, useReducer } from "react";
-
 import {
   getAssetDetails,
   getAssetTrailer,
 } from "../../movieApi/movieApi.utils";
 import Spinner from "../../components/spinner/spinner.component";
 
-const AssetContext = React.createContext();
+export const AssetContext = React.createContext();
 
-export const AssetDetailsStore = (props) => {
+const AssetDetailsStore = (props) => {
   const [state, setState] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
@@ -59,4 +58,4 @@ export const AssetDetailsStore = (props) => {
   );
 };
 
-export default AssetContext;
+export default AssetDetailsStore;

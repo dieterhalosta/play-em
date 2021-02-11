@@ -17,8 +17,7 @@ export const PageContainer = styled.div`
 `;
 export const TextContainer = styled.div`
   text-align: center;
-`;
-export const Text = styled.strong`
-  color: #E0610E
   font-size: 5rem;
+  color: #e0610e;
 `;
+export const Text = styled.strong``;

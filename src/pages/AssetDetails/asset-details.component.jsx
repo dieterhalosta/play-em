@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  AssetDetailsStore, {AssetContext} from '../../contexts/assetDetails/asset-details.context'
 import {
   ItemContainer,
   ImageContainer,
@@ -16,8 +17,11 @@ import {
   ModalContainer,
 } from "./asset-details.style";
 import CustomButton from "../../components/custom-button/custom-button.component";
+import Modal from "../../components/modal/modal.component";
 import ReactPlayer from "react-player";
-import Modal from "react-modal";
+
+
+
 
 const AssetDetails = () => {
   const [isOpen, setOpen] = useState(false);

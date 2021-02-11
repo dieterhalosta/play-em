@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
-
 import { getCategories } from "../../movieApi/movieApi.utils";
 import Spinner from "../../components/spinner/spinner.component";
-const CategoryContext = React.createContext();
 
-export const CategoryStore = (props) => {
+export const CategoryContext = React.createContext();
+
+const CategoryStore = (props) => {
   const [categories, setCategories] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     getCategories()
-      .then((data) => setCategories(data.geners))
+      .then((data) => {
+        console.log(data);
+        setCategories(data.genres);
+      })
       .catch((error) => setErrorMessage(error));
   }, []);
 
   if (errorMessage) return <div>{errorMessage}</div>;
-
   if (categories.length > 0) {
     return (
       <CategoryContext.Provider value={categories}>
@@ -27,4 +29,4 @@ export const CategoryStore = (props) => {
   return <Spinner message='Loading the categories' />;
 };
 
-export default CategoryContext;
+export default CategoryStore;

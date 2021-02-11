@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import { getMenuItems } from "../../movieApi/movieApi.utils";
 import Spinner from "../../components/spinner/spinner.component";
 
-const MenuContext = React.createContext();
+export const MenuContext = React.createContext();
 
-export const MenuStore = (props) => {
+const MenuStore = (props) => {
   const [menuItems, setMenuItems] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -23,10 +22,10 @@ export const MenuStore = (props) => {
     return <Spinner message='Loading the menu' />;
 
   return (
-    <MenuContext.Proiver value={menuItems}>
+    <MenuContext.Provider value={menuItems}>
       {props.children}
-    </MenuContext.Proiver>
+    </MenuContext.Provider>
   );
 };
 
-export default MenuContext;
+export default MenuStore;

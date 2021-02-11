@@ -8,7 +8,7 @@ import {
   CategoryLink,
 } from "./categories.style";
 import CustomButton from "../../components/custom-button/custom-button.component";
-import CategoryContext, { CategoryStore } from "../../contexts/categories/category.context";
+import   CategoryStore, {CategoryContext}  from "../../contexts/categories/category.context";
 
 const renderCategories = (categories) => {
   return categories.map((item) => {

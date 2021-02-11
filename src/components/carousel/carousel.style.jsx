@@ -1,46 +1,55 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
-export const CarouselContainer = styled.div`
+export const SliderWrapper = styled.div`
   width: 100%;
-  height: 70vh;
-  background-color: black;
-`;
-
-export const CarouselInner = styled.div`
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 80vh;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0;
   display: flex;
-`;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+  i {
+    font-size: 2vw;
+  }
+`
 
-export const CarouselItem = styled.div`
-  min-width:100%
+export const SliderItem = styled.div`
+  min-width: 100%;
   transition: 0.5s;
-  transform: ${(props) => `translateX(${props.x}%)`}
-`;
+  transform: ${props => `translateX(${props.current}%)` }
+`
 
-export const Arrows = styled.div`
-  flex: 2%;
-  height: 100%;
-  background-color: transparent;
-  display: grid;
-  place-items: center;
-  color: white;
-  cursor: pointer;
-`;
-
-export const CenterContent = styled.div`
-  flex: 90%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  text-align: justify;
-  text-align-last: center;
-`;
-
-export const CarouselImage = styled.img`
+export const SliderImage = styled.img`
   width: 100%;
   height: auto;
-`;
+`
+
+const buttonStyles = css`
+  position: absolute;
+  margin-top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 80%;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+  }
+`
+
+export const LeftButton = styled.button`
+  ${buttonStyles}
+  left: 0
+`
+
+export const RightButton = styled.button`
+  ${buttonStyles}
+  right: 0
+`

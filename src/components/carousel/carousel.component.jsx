@@ -1,42 +1,39 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import {
-  CarouselContainer,
-  CarouselInner,
-  CarouselItem,
-  Arrows,
-  CenterContent,
+  SliderWrapper,
+  SliderItem,
+  LeftButton,
+  RightButton,
 } from "./carousel.style";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-const Carousel = ({carouselItems}) => {
+const Carousel = ({ sliderItems }) => {
   const [current, setCurrent] = useState(0);
-  const lenght = carouselItems.length;
 
   const moveLeft = () => {
-    setCurrent(current === 0 ? lenght - 1 : current - 1);
+    current === 0 ? setCurrent(-100 * (sliderItems.length - 1)) : setCurrent(current + 100);
   };
 
   const moveRight = () => {
-    setCurrent(current === lenght - 1 ? 0 : current + 1);
+    current === -100 * (sliderItems.length - 1) ? setCurrent(0) : setCurrent(current - 100);
   };
 
   return (
-    <CarouselContainer>
-      <CarouselInner>
-        {carouselItems.map((item, index) => {
-          return (
-            <CarouselItem key={index} x={current}>{item}</CarouselItem>
-            )
-        })}
-        <Arrows onClick={moveLeft}>
-          <FaArrowLeft style={{ fontSize: 30 }} />
-        </Arrows>
-        <CenterContent />
-        <Arrows onClick={moveRight}>
-          <FaArrowRight style={{ fontSize: 30 }} />
-        </Arrows>
-      </CarouselInner>
-    </CarouselContainer>
+    <SliderWrapper>
+      {sliderItems.map((item, index) => {
+        return (
+          <SliderItem key={index} current={current}>
+            {item}
+          </SliderItem>
+        );
+      })}
+      <LeftButton onClick={moveLeft}>
+        <FaArrowLeft style={{ fontSize: 30 }} />
+      </LeftButton>
+      <RightButton onClick={moveRight}>
+        <FaArrowRight style={{ fontSize: 30 }} />
+      </RightButton>
+    </SliderWrapper>
   );
 };
 

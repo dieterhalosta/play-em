@@ -10,6 +10,7 @@ export const HeaderContainer = styled.div`
   margin-bottom: 25px;
   align-items: center;
   position: sticky;
+  color: #989f7d;
   z-index: 10;
 
   @media screen and (max-width: 800px) {
