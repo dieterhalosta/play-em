@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import MyImage from "../../assets/myImageTest.jpg";
 
 export const ItemContainer = styled.div`
   height: 80vh;
@@ -19,23 +18,16 @@ export const ItemContainer = styled.div`
 
 export const ImageContainer = styled.div`
   flex: 10%;
-  width: 50%;
   height: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const Image = styled.div`
-  background-image: url(${MyImage});
-  background-size: cover;
-  width: 80%;
+export const Image = styled.img`
   height: 90%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  border-radius: 10px;
-  box-shadow: 1px 8px #434046;
+  width: 80%;
 `;
 
 export const DetailContainer = styled.div`
@@ -65,7 +57,7 @@ export const TagLine = styled.span`
   font-size: 1.5rem;
 `;
 
-export const SmallDeatilsContainer = styled.div``;
+export const SmallDetailsContainer = styled.div``;
 
 export const ListOfDetails = styled.div`
   display: flex;
@@ -95,7 +87,6 @@ export const ModalContainer = styled.div`
   left: 50%;
   right: auto;
   bottom: auto;
-  marginright: -50%;
+  margin-right: -50%;
   transform: translate(-50%, -50%);
-
 `;

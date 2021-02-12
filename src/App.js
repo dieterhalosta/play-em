@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { GlobalStyle } from "./global.styles";
+import {MenuContext} from "./contexts/menu/menu.context";
+import PopularItemsStore from "./contexts/popular/popular.context";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
 import HomePage from "./pages/Home/homepage.component";
@@ -10,8 +11,7 @@ import PopularPage from "./pages/Popular/popular.component";
 import NotFound from "./pages/NotFound/not-found.component";
 import AssetDetails from "./pages/AssetDetails/asset-details.component";
 import MovieByCategory from "./pages/MoviesByCategory/movies-by-category.component";
-import {MenuContext} from "./contexts/menu/menu.context";
-import PopularItemsStore from "./contexts/popular/popular.context";
+
 
 const renderRoutes = (menuItems) => {
   return menuItems.map((item) => {
@@ -46,8 +46,8 @@ const App = () => {
       <PopularItemsStore>
       <Switch>
         {renderRoutes(menuItems)}
-        <Route exact path='/asset/:id' component={AssetDetails} />
         <Route exact path='/movies/:categoryId' component={MovieByCategory} />
+        <Route exact path='/asset/:id' component={AssetDetails} />
         <Route component={NotFound} />
       </Switch>
       </PopularItemsStore>

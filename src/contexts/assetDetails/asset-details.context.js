@@ -34,7 +34,7 @@ const AssetDetailsStore = (props) => {
     setState({ loading: true });
     getAssetTrailer(props.assetId)
       .then((data) => {
-        console.log(data);
+        console.log(data.results);
         setState({ videos: data.results, loading: false });
       })
       .catch((error) => {

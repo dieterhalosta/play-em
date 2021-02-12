@@ -1,3 +1,4 @@
+/* eslint-disable no-throw-literal */
 const api_url = "https://video-proxy.3rdy.tv/api/vod";
 const menu_url = "https://video-proxy.3rdy.tv/api/static/menu?=";
 
