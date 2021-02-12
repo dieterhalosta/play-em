@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { GlobalStyle } from "./global.styles";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";

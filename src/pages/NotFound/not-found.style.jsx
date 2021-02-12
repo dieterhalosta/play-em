@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height: 100 vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 80px;
+  height: 100%;
 `;
 
 export const MessageContainer = styled.div`
+  width: 100%;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Message = styled.h1`
-  font-size: 40px;
+  font-size: 4rem;
 `;
-export const PopularContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+export const PopularContainer = styled.div``;
 
 export const Items = styled.span`
-  margin: 20px;
+  height: 70%;
+  width: 100%;
+  display: inline-grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
 `;

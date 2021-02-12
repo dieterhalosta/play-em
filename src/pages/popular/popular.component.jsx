@@ -4,7 +4,7 @@ import {
   TitleContainer,
   Title,
   PopularContainer,
-  Items,
+  Items
 } from "./popular.style";
 import { PopularContext } from "../../contexts/popular/popular.context";
 import { renderMovies } from "../MoviesByCategory/movies-by-category.component";

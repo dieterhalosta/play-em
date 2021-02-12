@@ -19,15 +19,17 @@ export const Title = styled.h1`
 `;
 
 export const CategoriesBox = styled.div`
+height: 70%;
+width: 100%;
 display: inline-grid;
 grid-gap: 50px;
 grid-template-columns: auto auto auto;
 justify-content: space-evenly;
-height: 70%;
-width: 100%;`;
+`;
 
 export const CategoriesContainer = styled.div`
 `;
+
 export const CategoryLink = styled(Link)`
   cursor: pointer;
   text-align: center;

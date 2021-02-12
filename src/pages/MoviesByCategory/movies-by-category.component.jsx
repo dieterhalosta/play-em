@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useReducer, useRef, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useReducer,
+  useRef,
+  useCallback,
+} from "react";
 import {
   PageContainer,
   TitleContainer,
@@ -6,8 +12,6 @@ import {
   ItemsContainer,
   Items,
   MovieCard,
-  MovieCardTitleContainer,
-  MovieCardTitle,
 } from "./movies-by-category.style";
 import { getMoviesByCategory } from "../../movieApi/movieApi.utils";
 import Spinner from "../../components/spinner/spinner.component";
@@ -18,12 +22,10 @@ export const renderMovies = (movies) => {
       <Items key={item.id}>
         <MovieCard to={`asset/${item.id}`}>
           <img
-            alt='not found'
+            className='className="card-img-top" '
+            alt={item.title}
             src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
           />
-          <MovieCardTitleContainer>
-            <MovieCardTitle>{item.title}</MovieCardTitle>
-          </MovieCardTitleContainer>
         </MovieCard>
       </Items>
     );
@@ -56,7 +58,7 @@ const MovieByCategory = (props) => {
             movies: state.movies.concat(data.results),
             page: data.page,
             hasMore:
-              state.movies.length + data.results.length < data.tatal_results,
+              state.movies.length + data.results.length < data.total_results,
           });
           console.log(state);
         })
