@@ -1,4 +1,5 @@
-import React, { useEffect, useReducer } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useReducer, useState } from "react";
 import {
   getAssetDetails,
   getAssetTrailer,
@@ -51,7 +52,7 @@ const AssetDetailsStore = (props) => {
 
   return (
     <AssetContext.Provider
-      value={{ assetDetails: state.details, assetTrailers: state.videos }}
+      value={{ assetDetails: state.details, assetVideos: state.videos }}
     >
       {props.children}
     </AssetContext.Provider>

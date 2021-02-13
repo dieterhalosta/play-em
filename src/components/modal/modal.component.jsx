@@ -2,9 +2,9 @@ import React from "react";
 import { ModalContainer, VideoContainer, CloseButton } from "./modal.style";
 import { FaWindowClose } from "react-icons/fa";
 
-const Modal = ({ close, visible, children }) => {
+const Modal = ({ close, show, children }) => {
   return (
-    <ModalContainer visible={visible}>
+    <ModalContainer show={show}>
       <VideoContainer>
         <CloseButton onClick={close}>
           <FaWindowClose />

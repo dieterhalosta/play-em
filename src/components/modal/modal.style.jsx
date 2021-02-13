@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ModalContainer = styled.div`
-  display: ${(props) => props.visible} ? 'block' : 'none';
+  display: ${(props) => props.show ? 'block' : 'none'};
   position:fixed;
   top:0;
   left:0;
@@ -27,4 +27,5 @@ border: none;
 color: #E0610E
 top: -2px;
 right: -2px;
+font-size: 2rem;
 `;

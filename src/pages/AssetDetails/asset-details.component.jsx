@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AssetDetailsStore, {
   AssetContext,
 } from "../../contexts/assetDetails/asset-details.context";
+
 import {
   ItemContainer,
   ImageContainer,
@@ -46,9 +47,9 @@ const renderAssetDetails = (assetDetails, assetVideos, showModal) => {
         <DescriptionContainer>{assetDetails.overview}</DescriptionContainer>
         <ButtonContainer>
         {assetVideos && assetVideos.length > 0 ? 
-          
+            <div>
             <CustomButton onClick={showModal}>Watch Trailer</CustomButton>
-          
+            </div>
          : <div>There was not trailer to be found</div>}
          </ButtonContainer>
       </DetailContainer>
@@ -63,15 +64,15 @@ const renderAssetDetails = (assetDetails, assetVideos, showModal) => {
 };
 
 const AssetDetails = (props) => {
-  const [isOpen, setOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const { id } = props.match.params;
 
-  const openModal = () => {
-    setOpen(true);
+  const show = () => {
+    setShowModal(true);
   };
 
-  const closeModal = () => {
-    setOpen(false);
+  const hide = () => {
+    setShowModal(false);
   };
 
   return (
@@ -79,27 +80,29 @@ const AssetDetails = (props) => {
       <AssetContext.Consumer>
         {({ assetDetails, assetVideos }) => {
           return (
+            <React.Fragment>
             <ItemContainer>
-              {renderAssetDetails(assetDetails, assetVideos, openModal)}
+              {renderAssetDetails(assetDetails, assetVideos, show)}
               {assetVideos &&
               assetVideos.length > 0 &&
               assetVideos.find((video) => video.type === "Trailer") ? (
                 <ModalContainer>
                   <Modal
-                    openModal={openModal}
-                    onClose={closeModal}
+                    show={showModal}
+                    close={hide}
                   >
                     <ReactPlayer
                       url={`https://www.youtube.com/watch?v=${assetVideos.find(item => item.type === 'Trailer').key}`}
                       width='100%'
                       height='100%'
-                      playing={isOpen}
+                      playing={showModal}
                       controls={true}
                     />
                   </Modal>
                 </ModalContainer>
               ) : null}
             </ItemContainer>
+            </React.Fragment>
           );
         }}
       </AssetContext.Consumer>
