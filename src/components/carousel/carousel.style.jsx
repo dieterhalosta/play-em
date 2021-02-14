@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
 export const SliderContainer = styled.div`
   width: 100%;
@@ -18,6 +17,7 @@ export const SliderItem = styled.div`
   transition: 0.5s;
   transform: ${(props) => `translateX(${props.current}%)`};
 `;
+
 export const SliderDetails = styled.div``;
 
 export const SliderImage = styled.img`
@@ -26,6 +26,7 @@ export const SliderImage = styled.img`
 `;
 
 export const TitleContainer = styled.div`
+  width: 100%;
   position: absolute;
   background: transparent;
   justify-content: center;

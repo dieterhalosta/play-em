@@ -1,12 +1,11 @@
 import React from "react";
-
-import Carousel from "../../components/carousel/carousel.component";
 import {
   SliderDetails,
   SliderImage,
   TitleContainer,
   Title,
 } from "../../components/carousel/carousel.style";
+import Carousel from "../../components/carousel/carousel.component";
 import { PopularContext } from "../../contexts/popular/popular.context";
 
 const renderSlider = (popularItems) => {
@@ -29,6 +28,7 @@ const renderSlider = (popularItems) => {
 
   return <Carousel sliderItems={sliderImages} />;
 };
+
 const HomePage = () => {
   return (
     <React.Fragment>

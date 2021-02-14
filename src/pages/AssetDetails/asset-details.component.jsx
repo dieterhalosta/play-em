@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AssetDetailsStore, {
   AssetContext,
 } from "../../contexts/assetDetails/asset-details.context";
-
 import {
   ItemContainer,
   ImageContainer,
@@ -17,7 +16,7 @@ import {
   DescriptionContainer,
   ButtonContainer,
   Image,
-  ModalContainer
+  ModalContainer,
 } from "./asset-details.style";
 import CustomButton from "../../components/custom-button/custom-button.component";
 import Modal from "../../components/modal/modal.component";
@@ -27,7 +26,9 @@ const renderAssetDetails = (assetDetails, assetVideos, showModal) => {
   const genres =
     assetDetails &&
     assetDetails.genres &&
-    assetDetails.genres.map(item => <SmallDetails key={item.id}>{item.name}</SmallDetails>);
+    assetDetails.genres.map((item) => (
+      <SmallDetails key={item.id}>{item.name}</SmallDetails>
+    ));
 
   return (
     <ItemContainer>
@@ -46,12 +47,12 @@ const renderAssetDetails = (assetDetails, assetVideos, showModal) => {
         </SmallDetailsContainer>
         <DescriptionContainer>{assetDetails.overview}</DescriptionContainer>
         <ButtonContainer>
-        {assetVideos && assetVideos.length > 0 ? 
-            <div>
+          {assetVideos && assetVideos.length > 0 ? (
             <CustomButton onClick={showModal}>Watch Trailer</CustomButton>
-            </div>
-         : <div>There was not trailer to be found</div>}
-         </ButtonContainer>
+          ) : (
+            <div>There was not trailer to be found</div>
+          )}
+        </ButtonContainer>
       </DetailContainer>
       <ImageContainer>
         <Image
@@ -81,27 +82,27 @@ const AssetDetails = (props) => {
         {({ assetDetails, assetVideos }) => {
           return (
             <React.Fragment>
-            <ItemContainer>
-              {renderAssetDetails(assetDetails, assetVideos, show)}
-              {assetVideos &&
-              assetVideos.length > 0 &&
-              assetVideos.find((video) => video.type === "Trailer") ? (
-                <ModalContainer>
-                  <Modal
-                    show={showModal}
-                    close={hide}
-                  >
-                    <ReactPlayer
-                      url={`https://www.youtube.com/watch?v=${assetVideos.find(item => item.type === 'Trailer').key}`}
-                      width='100%'
-                      height='100%'
-                      playing={showModal}
-                      controls={true}
-                    />
-                  </Modal>
-                </ModalContainer>
-              ) : null}
-            </ItemContainer>
+              <ItemContainer>
+                {renderAssetDetails(assetDetails, assetVideos, show)}
+                {assetVideos &&
+                assetVideos.length > 0 &&
+                assetVideos.find((video) => video.type === "Trailer") ? (
+                  <ModalContainer>
+                    <Modal show={showModal} close={hide}>
+                      <ReactPlayer
+                        url={`https://www.youtube.com/watch?v=${
+                          assetVideos.find((item) => item.type === "Trailer")
+                            .key
+                        }`}
+                        width='100%'
+                        height='100%'
+                        playing={showModal}
+                        controls={true}
+                      />
+                    </Modal>
+                  </ModalContainer>
+                ) : null}
+              </ItemContainer>
             </React.Fragment>
           );
         }}

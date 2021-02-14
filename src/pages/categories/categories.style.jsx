@@ -9,6 +9,7 @@ export const CategoryPageContainer = styled.div`
   overflow: hidden;
   margin-bottom: 30px;
 `;
+
 export const TitleContainer = styled.div`
   height: 30%;
   width: 100%;

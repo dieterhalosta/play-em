@@ -47,7 +47,6 @@ const AssetDetailsStore = (props) => {
   useEffect(() => loadItemTrailers(), []);
 
   if (state.loading) return <Spinner />;
-
   if (state.errorMessage) return <div>{state.errorMessage}</div>;
 
   return (

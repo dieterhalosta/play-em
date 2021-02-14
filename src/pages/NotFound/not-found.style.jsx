@@ -13,6 +13,7 @@ export const MessageContainer = styled.div`
 export const Message = styled.h1`
   font-size: 4rem;
 `;
+
 export const PopularContainer = styled.div``;
 
 export const Items = styled.span`

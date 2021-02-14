@@ -48,8 +48,7 @@ const App = () => {
         {renderRoutes(menuItems)}
         <Route  path='/asset/:id' exact component={AssetDetails} />
         <Route  path='/:categoryId' exact component={MovieByCategory} />
-        
-        <Route component={NotFound} />
+        <Route path='*' component={NotFound} />
       </Switch>
       </PopularItemsStore>
       <Footer />
