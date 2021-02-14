@@ -1,16 +1,31 @@
 import React from "react";
 
 import Carousel from "../../components/carousel/carousel.component";
-import { SliderImage } from "../../components/carousel/carousel.style";
+import {
+  SliderDetails,
+  SliderImage,
+  TitleContainer,
+  Title,
+} from "../../components/carousel/carousel.style";
 import { PopularContext } from "../../contexts/popular/popular.context";
 
 const renderSlider = (popularItems) => {
-  const sliderImages = popularItems.map((item) => (
-    <SliderImage
-      src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-      alt='not found'
-    />
-  ));
+  const sliderImages = popularItems.map(
+    (item) => (
+      console.log(item),
+      (
+        <SliderDetails>
+          <TitleContainer>
+            <Title>{item.title}</Title>
+          </TitleContainer>
+          <SliderImage
+            src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+            alt='not found'
+          />
+        </SliderDetails>
+      )
+    )
+  );
 
   return <Carousel sliderItems={sliderImages} />;
 };

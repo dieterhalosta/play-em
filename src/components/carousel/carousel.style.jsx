@@ -1,6 +1,7 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
-export const SliderWrapper = styled.div`
+export const SliderContainer = styled.div`
   width: 100%;
   height: 80vh;
   box-sizing: border-box;
@@ -8,28 +9,38 @@ export const SliderWrapper = styled.div`
   margin-bottom: 30px;
   padding: 0;
   display: flex;
-  align-items: center;
   overflow: hidden;
   background: black;
-  i {
-    font-size: 2vw;
-  }
-`
+`;
 
 export const SliderItem = styled.div`
   min-width: 100%;
   transition: 0.5s;
-  transform: ${props => `translateX(${props.current}%)` }
-`
+  transform: ${(props) => `translateX(${props.current}%)`};
+`;
+export const SliderDetails = styled.div``;
 
 export const SliderImage = styled.img`
   width: 100%;
   height: auto;
-`
+`;
+
+export const TitleContainer = styled.div`
+  position: absolute;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+export const Title = styled.h1`
+  font-size: 3rem;
+  color: #e0610e;
+`;
 
 const buttonStyles = css`
   position: absolute;
-  margin-top: 16px;
+  margin-top: 26px;
   top: 50%;
   transform: translateY(-50%);
   width: 10%;
@@ -42,14 +53,14 @@ const buttonStyles = css`
     background: rgba(0, 0, 0, 0.356);
     cursor: pointer;
   }
-`
+`;
 
 export const LeftButton = styled.button`
   ${buttonStyles}
   left: 0
-`
+`;
 
 export const RightButton = styled.button`
   ${buttonStyles}
   right: 0
-`
+`;
