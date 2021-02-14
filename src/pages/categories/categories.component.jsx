@@ -14,7 +14,7 @@ const renderCategories = (categories) => {
   return categories.map((item) => {
     return (
       <CategoriesContainer key={item.id}>
-        <CategoryLink to={`/movies/${item.id}`}>
+        <CategoryLink to={`/${item.id}`}>
           <CustomButton className='ltc'>{item.name}</CustomButton>
         </CategoryLink>
       </CategoriesContainer>

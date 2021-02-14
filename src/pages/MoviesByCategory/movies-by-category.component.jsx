@@ -53,6 +53,7 @@ const MovieByCategory = (props) => {
       setState({ loading: true, errorMessage: "" });
       getMoviesByCategory(categoryId, state.page + 1)
         .then((data) => {
+          console.log(data);
           setState({
             loading: false,
             movies: state.movies.concat(data.results),
@@ -60,7 +61,6 @@ const MovieByCategory = (props) => {
             hasMore:
               state.movies.length + data.results.length < data.total_results,
           });
-          console.log(state);
         })
         .catch((error) => {
           setState({
