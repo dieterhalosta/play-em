@@ -1,6 +1,13 @@
 # Play'EM
 A small VOD app.
 
+<img src="images/HomePage.jpg">
+<img src="images/Categories.jpg">
+<img src="images/MoviesByCategory.jpg">
+<img src="images/Popular.jpg">
+<img src="images/AssetDetails.jpg">
+<img src="images/NotFound.jpg">
+
 # Inspiration
 I created a VOD app to further develop my skills with ReactJs.
 
@@ -43,13 +50,14 @@ The app architecture/structure is mostly based on the following criterias:
 
 # Current progress
 - [x] App design
-- [ ] Basic UI prototype
-- [ ] Create main page
-- [ ] Create components from main page
-- [ ] Implement React Context
-- [ ] Bring data from external source
-- [ ] Remove extra code and fix typos or bugs
-- [ ] Add support for mobile devices
+- [x] Basic UI prototype
+- [X] Create main page
+- [X] Create components from main page
+- [X] Design and create hard code copy template of the project
+- [X] Implement React Context
+- [X] Bring data from external source
+- [X] Remove extra code and fix typos or bugs
+- [ ] ...
 
 # Running
 
@@ -57,7 +65,7 @@ The app architecture/structure is mostly based on the following criterias:
 
 + Clone this repo `git@github.com:dieterhalosta/play-em.git`
 + `cd play-em`
-+ run `npm install`
++ run `npm install` or `yarn`
 + run `yarn start`
 
 ## License
