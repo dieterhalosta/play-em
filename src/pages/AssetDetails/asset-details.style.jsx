@@ -27,7 +27,6 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   height: 90%;
-  width: 80%;
 `;
 
 export const DetailContainer = styled.div`
@@ -83,10 +82,4 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-  // top: 50%;
-  // left: 50%;
-  // right: auto;
-  // bottom: auto;
-  // margin-right: -50%;
-  // transform: translate(-50%, -50%);
 `;

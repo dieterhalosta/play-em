@@ -82,27 +82,24 @@ const AssetDetails = (props) => {
         {({ assetDetails, assetVideos }) => {
           return (
             <React.Fragment>
-              <ItemContainer>
-                {renderAssetDetails(assetDetails, assetVideos, show)}
-                {assetVideos &&
-                assetVideos.length > 0 &&
-                assetVideos.find((video) => video.type === "Trailer") ? (
-                  <ModalContainer>
-                    <Modal show={showModal} close={hide}>
-                      <ReactPlayer
-                        url={`https://www.youtube.com/watch?v=${
-                          assetVideos.find((item) => item.type === "Trailer")
-                            .key
-                        }`}
-                        width='100%'
-                        height='100%'
-                        playing={showModal}
-                        controls={true}
-                      />
-                    </Modal>
-                  </ModalContainer>
-                ) : null}
-              </ItemContainer>
+              {renderAssetDetails(assetDetails, assetVideos, show)}
+              {assetVideos &&
+              assetVideos.length > 0 &&
+              assetVideos.find((video) => video.type === "Trailer") ? (
+                <ModalContainer>
+                  <Modal show={showModal} close={hide}>
+                    <ReactPlayer
+                      url={`https://www.youtube.com/watch?v=${
+                        assetVideos.find((item) => item.type === "Trailer").key
+                      }`}
+                      width='100%'
+                      height='100%'
+                      playing={showModal}
+                      controls={true}
+                    />
+                  </Modal>
+                </ModalContainer>
+              ) : null}
             </React.Fragment>
           );
         }}

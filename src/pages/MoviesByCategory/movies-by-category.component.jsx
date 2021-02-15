@@ -20,9 +20,8 @@ export const renderMovies = (movies) => {
   return movies.map((item) => {
     return (
       <Items key={item.id}>
-        <MovieCard to={`asset/${item.id}`}>
+        <MovieCard to={`/asset/${item.id}`}>
           <img
-            className='className="card-img-top" '
             alt={item.title}
             src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
           />
